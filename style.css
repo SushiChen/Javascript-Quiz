@@ -2,19 +2,19 @@ body {
     background-color: white;
 }
 
-.grid {
+.body {
     width: 600px;
     height: 500px;
+    margin: auto;
     background-color: #fff;
     padding: 10px 50px 50px 50px;
 }
 
-.grid h1 {
-    font-family: "sans-serif";
-    background-color: purple;
+.body h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 60px;
     text-align: center;
-    color: #ffffff;
+    color: purple
     padding: 2px 0px;
     
 }
@@ -37,8 +37,8 @@ body {
     display: none;
 }
 
-.grid #question {
-    font-family: "monospace";
+.body #question {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
     color: black;
 }
@@ -48,10 +48,10 @@ body {
 }
 
 #btn0, #btn1, #btn2, #btn3 {
-    background-color: purple;
-    width: 250px;
+    background-color: white;
+    width: 300px;
     font-size: 20px;
-    color: #fff;
+    color: black
     border: 1px solid;
     margin: 10px 40px 10px 0px;
     padding: 10px 10px;
