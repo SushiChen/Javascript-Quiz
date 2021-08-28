@@ -1,0 +1,53 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Java script Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="body">
+        <div id= "startscreen">
+            <button id=start> START </button>
+        </div>
+        <div id="quiz">
+            <h1>Javascript Quiz</h1>
+ 
+            <p id="question"></p>
+ 
+            <div class="buttons">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>
+                <button id="btn3"><span id="choice3"></span></button>
+                
+            </div>
+
+            <div id="timer"> 
+                <h2>Time remaining</h2>
+                <p id="timerdisplay">75</p>
+            </div>
+ 
+            <footer>
+                <p id="completion">Question x of y</p>
+            </footer>
+        </div>
+        <div id="gameover">
+            <h1>Result</h1>
+            <h2 id= 'score'> </h2>
+            <form> <label for ="inital">Enter initials </label>
+            <input type="text" id="inital" name="initial">
+            <input type="submit" id="submit" value="Submit">
+            </form>
+        </div>
+
+        <div id= highscore>
+            <ol id= scores></ol>
+            <button id= clear> Clear </button>
+            <button id= back> Go Back </button>
+        </div>
+    </div>
+ 
+<script src="script.js"></script>
+ 
+</body>
+</html>
