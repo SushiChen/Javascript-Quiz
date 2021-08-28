@@ -17,11 +17,11 @@ body {
     color: purple
     
 }
-
+/* Hides Quiz Screen */
 #quiz {
     display: none;
 }
-
+/* Hides highscore screen */
 #highscore {
     display: none;
 }
@@ -55,7 +55,7 @@ body {
     margin: 10px 40px 10px 0px;
     padding: 10px 10px;
 }
-
+/* Once hovering over the button turn to 50% opacity */
 #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
     cursor: pointer;
     opacity: 50% ;

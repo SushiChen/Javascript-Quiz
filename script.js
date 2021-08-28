@@ -32,7 +32,7 @@ Question.prototype.isCorrectAnswer = function(choice) {
     return this.answer === choice;
 }
  
- 
+//  Quiz questions
 var questions = [
     new Question("Which built-in method adds one or more elements to the end of an array and returns the new length of the array?", ["A - last()", "B - put()", "C - push()","D - None of the above."], "C - push()"),
     new Question("Which of the following function of Number object returns the number's value??", ["A - toString()", "B - valueOf()", "C - toLocaleString()", "D - toPrecision()"], "B - valueOf()"),
@@ -43,7 +43,7 @@ var questions = [
     new Question("Which of the following function of Array object reverses the order of the elements of an array?",["A - reverse()","B - push()","C - reduce()","D - reduceRight()"], "A - reverse()")
 ]
 
- 
+//  function that shows the progress between questions
 function showProgress() {
     var currentQuestionNumber = quiz.questionIndex + 1;
     var element = document.getElementById("completion");
@@ -55,7 +55,7 @@ var gameover = document.querySelector ("#gameover");
 var highscore = document.querySelector ("#highscore");
 var startscreen = document.querySelector ("#startscreen");
 var startbutton = document.querySelector ("#start");
-
+// When start button is clicked it allows for the fuction to work
 startbutton.addEventListener("click",function(event){
     event.preventDefault;
     startscreen.style.display = "none";
@@ -69,10 +69,11 @@ function showScores() {
     quizclear.style.display = "none";
     gameover.style.display = "block";
 };
-
+// Function that controls the show highscore page
 function showhighscore() {
     gameover.style.display = "none";
     highscore.style.display = "block";
+    // Takes scores from local storage
     var scores = JSON.parse(localStorage.getItem("scores" ))
     var orderlist = document.querySelector ("#scores")
     orderlist.innerHTML = ""
@@ -89,6 +90,7 @@ function showhighscore() {
 
 
 }
+// Allows for go back button to work by hiding all of the other screens like highcore and showing start screen
     var Goback = document.querySelector ("#back");
     Goback.addEventListener("click", function(event){
         event.preventDefault()
@@ -104,7 +106,7 @@ function showhighscore() {
         localStorage.clear();
         showhighscore();
     })
-
+// Controls submit button and Inital
     var submitbutton = document.querySelector ("#submit")
     submitbutton.addEventListener("click",function (event) {
         event.preventDefault()
@@ -112,6 +114,7 @@ function showhighscore() {
         var userscore = {
             inital:inital.value, score:sec
         }
+        // Keeps Initials onto local storage
         var scores = JSON.parse(localStorage.getItem("scores")) || [];
         scores.push(userscore);
         localStorage.setItem("scores", JSON.stringify(scores))
@@ -129,7 +132,7 @@ function guess(id, guess) {
 };
  
 var sec = 75
-
+// Function that controls the timer that allows for it to count down.
 function populate() {
     var timer = setInterval(function(){
         document.getElementById('timerdisplay').innerHTML=sec;
